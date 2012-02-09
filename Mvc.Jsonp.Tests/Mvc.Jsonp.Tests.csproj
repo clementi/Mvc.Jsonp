@@ -9,7 +9,7 @@
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Mvc.Jsonp.Tests</RootNamespace>
-    <AssemblyName>JsonpResult.Tests</AssemblyName>
+    <AssemblyName>Mvc.Jsonp.Tests</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

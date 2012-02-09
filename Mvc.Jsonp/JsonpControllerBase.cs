@@ -5,32 +5,32 @@ namespace Mvc.Jsonp
 
     public abstract class JsonpControllerBase : Controller
     {
-        protected JsonpResult Jsonp(object data, string callback)
+        protected internal JsonpResult Jsonp(object data, string callback)
         {
             return this.Jsonp(data, callback, null);
         }
 
-        protected JsonpResult Jsonp(object data, string callback, JsonRequestBehavior jsonRequestBehavior)
+        protected internal JsonpResult Jsonp(object data, string callback, JsonRequestBehavior jsonRequestBehavior)
         {
             return this.Jsonp(data, callback, null, jsonRequestBehavior);
         }
 
-        protected JsonpResult Jsonp(object data, string callback, string contentType)
+        protected internal JsonpResult Jsonp(object data, string callback, string contentType)
         {
             return this.Jsonp(data, callback, contentType, null);
         }
 
-        protected JsonpResult Jsonp(object data, string callback, string contentType, JsonRequestBehavior jsonRequestBehavior)
+        protected internal JsonpResult Jsonp(object data, string callback, string contentType, JsonRequestBehavior jsonRequestBehavior)
         {
             return this.Jsonp(data, callback, contentType, null, jsonRequestBehavior);
         }
 
-        protected JsonpResult Jsonp(object data, string callback, string contentType, Encoding contentEncoding)
+        protected internal JsonpResult Jsonp(object data, string callback, string contentType, Encoding contentEncoding)
         {
             return this.Jsonp(data, callback, contentType, contentEncoding, JsonRequestBehavior.DenyGet);
         }
 
-        protected virtual JsonpResult Jsonp(
+        protected internal virtual JsonpResult Jsonp(
             object data, 
             string callback, 
             string contentType, 

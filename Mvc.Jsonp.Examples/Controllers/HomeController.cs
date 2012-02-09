@@ -1,4 +1,6 @@
-﻿namespace Mvc.Jsonp.Examples.Controllers
+﻿using System.Web.Mvc;
+
+namespace Mvc.Jsonp.Examples.Controllers
 {
     using System.Collections.Generic;
     using Models;
@@ -14,7 +16,7 @@
                 new Starship { Name = "Tikopai", Registry = "NCC-1800" }
             };
 
-            return this.Jsonp(starships, callback);
+            return this.Jsonp(starships, callback, JsonRequestBehavior.AllowGet);
         }
     }
 }

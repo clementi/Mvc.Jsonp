@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mvc.Jsonp", "Mvc.Jsonp\Mvc.Jsonp.csproj", "{78660209-DD85-4919-8A7F-35131EC72532}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mvc.Jsonp.Tests", "Mvc.Jsonp.Tests\Mvc.Jsonp.Tests.csproj", "{AFAB8710-4BFF-4D2A-8AF0-89C6BE59D73D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mvc.Jsonp.Examples", "Mvc.Jsonp.Examples\Mvc.Jsonp.Examples.csproj", "{E1B06DCA-1EC3-4CD1-B762-A7E4AA37103B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{78660209-DD85-4919-8A7F-35131EC72532}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{78660209-DD85-4919-8A7F-35131EC72532}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{78660209-DD85-4919-8A7F-35131EC72532}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{78660209-DD85-4919-8A7F-35131EC72532}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AFAB8710-4BFF-4D2A-8AF0-89C6BE59D73D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AFAB8710-4BFF-4D2A-8AF0-89C6BE59D73D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AFAB8710-4BFF-4D2A-8AF0-89C6BE59D73D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AFAB8710-4BFF-4D2A-8AF0-89C6BE59D73D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E1B06DCA-1EC3-4CD1-B762-A7E4AA37103B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E1B06DCA-1EC3-4CD1-B762-A7E4AA37103B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E1B06DCA-1EC3-4CD1-B762-A7E4AA37103B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E1B06DCA-1EC3-4CD1-B762-A7E4AA37103B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

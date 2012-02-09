@@ -1,0 +1,4 @@
+*ReSharper*
+bin
+obj
+*.suo

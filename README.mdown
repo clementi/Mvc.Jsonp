@@ -18,3 +18,5 @@ Here's an example:
             return this.Jsonp(starships, callback, JsonRequestBehavior.AllowGet);
         }
     }
+
+Based on http://stackoverflow.com/questions/758879/asp-net-mvc-returning-jsonp.

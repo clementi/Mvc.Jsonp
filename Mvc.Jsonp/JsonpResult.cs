@@ -7,8 +7,8 @@ namespace Mvc.Jsonp
 
     public class JsonpResult : JsonResult
     {
-        private const string NullCallbackExceptionMessage = "Callback is null.";
-        private const string NullContextExceptionMessage = "Context is null.";
+        private const string NullCallbackExceptionMessage = "Callback cannot be null.";
+        private const string NullContextExceptionMessage = "Context cannot be null.";
         private const string JsonpCallbackFormat = "{0}({1});";
         private const string JsonpContentType = "application/javascript";
         private const string InvalidOperationExceptionMessage = "This request has been blocked because sensitive information could be disclosed to third party web sites when this is used in a GET request. To allow GET requests, set JsonRequestBehavior to AllowGet.";

@@ -1,7 +1,6 @@
 namespace Mvc.Jsonp
 {
     using System;
-    using System.Text;
     using System.Web;
     using System.Web.Mvc;
     using System.Web.Script.Serialization;
@@ -15,7 +14,7 @@ namespace Mvc.Jsonp
         private const string InvalidOperationExceptionMessage = "This request has been blocked because sensitive information could be disclosed to third party web sites when this is used in a GET request. To allow GET requests, set JsonRequestBehavior to AllowGet.";
         private const string HttpVerbGet = "get";
 
-    	public string Callback { get; set; }
+        public string Callback { get; set; }
 
         public override void ExecuteResult(ControllerContext context)
         {
@@ -28,13 +27,15 @@ namespace Mvc.Jsonp
             if (this.Callback == null)
                 throw new ArgumentNullException(NullCallbackExceptionMessage);
 
-            if (string.IsNullOrEmpty(this.ContentType))
-                this.ContentType = JsonpContentType;
-
-            if (this.ContentEncoding == null)
-                this.ContentEncoding = Encoding.UTF8;
-
             HttpResponseBase response = context.HttpContext.Response;
+
+            if (string.IsNullOrEmpty(this.ContentType))
+                response.ContentType = JsonpContentType;
+            else
+                response.ContentType = this.ContentType;
+
+            if (this.ContentEncoding != null)
+                this.ContentEncoding = this.ContentEncoding;
 
             if (this.Data != null)
             {

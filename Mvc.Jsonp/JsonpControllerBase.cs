@@ -3,7 +3,7 @@ namespace Mvc.Jsonp
     using System.Text;
     using System.Web.Mvc;
 
-    public abstract class JsonpController : Controller
+    public abstract class JsonpControllerBase : Controller
     {
         protected JsonpResult Jsonp(object data, string callback)
         {

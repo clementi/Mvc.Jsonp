@@ -3,7 +3,7 @@
     using System.Collections.Generic;
     using Models;
 
-    public class HomeController : JsonpController
+    public class HomeController : JsonpControllerBase
     {
         public JsonpResult Index(string callback = "processStarships")
         {

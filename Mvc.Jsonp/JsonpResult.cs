@@ -35,7 +35,7 @@ namespace Mvc.Jsonp
                 response.ContentType = this.ContentType;
 
             if (this.ContentEncoding != null)
-                this.ContentEncoding = this.ContentEncoding;
+                response.ContentEncoding = this.ContentEncoding;
 
             if (this.Data != null)
             {

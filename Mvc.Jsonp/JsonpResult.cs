@@ -18,30 +18,52 @@ namespace Mvc.Jsonp
 
         public override void ExecuteResult(ControllerContext context)
         {
-            if (context == null)
-                throw new ArgumentNullException(NullContextExceptionMessage);
-
-            if (this.JsonRequestBehavior == JsonRequestBehavior.DenyGet && context.HttpContext.Request.HttpMethod.ToLower() == HttpVerbGet)
-                throw new InvalidOperationException(InvalidOperationExceptionMessage);
-
-            if (this.Callback == null)
-                throw new ArgumentNullException(NullCallbackExceptionMessage);
+            CheckContext(context);
+            this.CheckRequestBehavior(context);
+            this.CheckCallback();
 
             HttpResponseBase response = context.HttpContext.Response;
 
-            if (string.IsNullOrEmpty(this.ContentType))
-                response.ContentType = JsonpContentType;
-            else
-                response.ContentType = this.ContentType;
-
-            if (this.ContentEncoding != null)
-                response.ContentEncoding = this.ContentEncoding;
+            this.SetResponseContentType(response);
+            this.SetResponseContentEncoding(response);
 
             if (this.Data != null)
             {
                 var jsSerializer = new JavaScriptSerializer();
                 response.Write(string.Format(JsonpCallbackFormat, this.Callback, jsSerializer.Serialize(this.Data)));
             }
+        }
+
+        private static void CheckContext(ControllerContext context)
+        {
+            if (context == null)
+                throw new ArgumentNullException(NullContextExceptionMessage);
+        }
+
+        private void CheckRequestBehavior(ControllerContext context)
+        {
+            if (this.JsonRequestBehavior == JsonRequestBehavior.DenyGet && context.HttpContext.Request.HttpMethod.ToLower() == HttpVerbGet)
+                throw new InvalidOperationException(InvalidOperationExceptionMessage);
+        }
+
+        private void CheckCallback()
+        {
+            if (this.Callback == null)
+                throw new ArgumentNullException(NullCallbackExceptionMessage);
+        }
+
+        private void SetResponseContentType(HttpResponseBase response)
+        {
+            if (string.IsNullOrEmpty(this.ContentType))
+                response.ContentType = JsonpContentType;
+            else
+                response.ContentType = this.ContentType;
+        }
+
+        private void SetResponseContentEncoding(HttpResponseBase response)
+        {
+            if (this.ContentEncoding != null)
+                response.ContentEncoding = this.ContentEncoding;
         }
     }
 }

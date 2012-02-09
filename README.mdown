@@ -1,3 +1,20 @@
 # Mvc.Jsonp
 
 A simple ActionResult and Controller superclass for adding JSONP support to MVC 3.
+
+Here's an example:
+
+    public class HomeController : JsonpControllerBase
+    {
+        public JsonpResult Index(string callback = "processStarships")
+        {
+            var starships = new List<Starship>
+            {
+                new Starship { Name = "Enterprise", Registry = "NCC-1701" },
+                new Starship { Name = "Galaxy", Registry = "NCC-70637" },
+                new Starship { Name = "Tikopai", Registry = "NCC-1800" }
+            };
+
+            return this.Jsonp(starships, callback, JsonRequestBehavior.AllowGet);
+        }
+    }

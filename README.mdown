@@ -2,7 +2,7 @@
 
 A simple ActionResult and Controller superclass for adding JSONP support to MVC 3.
 
-Here's an example:
+## Example
 
     public class HomeController : JsonpControllerBase
     {
@@ -19,4 +19,12 @@ Here's an example:
         }
     }
 
-Based on http://stackoverflow.com/questions/758879/asp-net-mvc-returning-jsonp.
+## NuGet Package
+
+[A NuGet package of Mvc.Jsonp is available][nuget].
+
+## Acknowledgements
+
+Mvc.Jsonp is based on http://stackoverflow.com/questions/758879/asp-net-mvc-returning-jsonp.
+
+[nuget]: https://nuget.org/packages/Mvc.Jsonp/

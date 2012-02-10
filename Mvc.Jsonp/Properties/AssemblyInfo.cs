@@ -4,6 +4,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("Mvc.Jsonp")]
 [assembly: AssemblyDescription("JSONP for ASP.NET MVC")]
 [assembly: AssemblyProduct("Mvc.Jsonp")]
+[assembly: AssemblyCompany("Jeffrey Pratt")]
 [assembly: AssemblyCopyright("Copyright © Jeffrey Pratt 2012")]
 
 [assembly: Guid("6f2e8c0c-a626-43f7-a9c0-8c3bed088387")]

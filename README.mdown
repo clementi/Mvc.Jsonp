@@ -4,20 +4,30 @@ A simple ActionResult and Controller superclass for adding JSONP support to MVC 
 
 ## Example
 
-    public class HomeController : JsonpControllerBase
-    {
-        public JsonpResult Index(string callback = "processStarships")
-        {
-            var starships = new List<Starship>
-            {
-                new Starship { Name = "Enterprise", Registry = "NCC-1701" },
-                new Starship { Name = "Galaxy", Registry = "NCC-70637" },
-                new Starship { Name = "Tikopai", Registry = "NCC-1800" }
-            };
+Just subclass your controller with `JsonpControllerBase`, like this:
 
-            return this.Jsonp(starships, callback, JsonRequestBehavior.AllowGet);
-        }
+```c#
+public class HomeController : JsonpControllerBase
+{
+    public JsonpResult Index(string callback = "processStarships")
+    {
+        var starships = new List<Starship>
+        {
+            new Starship { Name = "Enterprise", Registry = "NCC-1701" },
+            new Starship { Name = "Galaxy", Registry = "NCC-70637" },
+            new Starship { Name = "Tikopai", Registry = "NCC-1800" }
+        };
+
+        return this.Jsonp(starships, callback, JsonRequestBehavior.AllowGet);
     }
+}
+```
+
+This will give you output of type `application/javascript` like this:
+
+```
+processStarships([{"Name":"Enterprise","Registry":"NCC-1701"},{"Name":"Galaxy","Registry":"NCC-70637},{"Name":"Tikopai","Registry":"NCC-1800"}]);
+```
 
 ## NuGet Package
 

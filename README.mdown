@@ -31,7 +31,11 @@ processStarships([{"Name":"Enterprise","Registry":"NCC-1701"},{"Name":"Galaxy","
 
 ## NuGet Package
 
-[A NuGet package of Mvc.Jsonp is available][nuget].
+To install Mvc.Jsonp from the [NuGet repository][nuget], use this command:
+
+```
+PM> Install-Package Mvc.Jsonp
+```
 
 ## Acknowledgements
 

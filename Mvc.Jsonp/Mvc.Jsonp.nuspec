@@ -7,6 +7,6 @@
 		<description>$description$</description>
 		<language>en-US</language>
 		<projectUrl>http://github.com/clementi/Mvc.Jsonp</projectUrl>
-		<licenseUrl>https://raw.github.com/clementi/Mvc.Jsonp/master/license.mdown</licenseUrl>
+		<licenseUrl>http://github.com/clementi/Mvc.Jsonp/blob/master/license.mdown</licenseUrl>
 	</metadata>
 </package>

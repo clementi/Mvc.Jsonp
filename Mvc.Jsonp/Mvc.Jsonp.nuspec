@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package>
+	<metadata>
+		<id>$id$</id>
+		<version>$version$</version>
+		<authors>Jeffrey Pratt</authors>
+		<description>$description$</description>
+		<language>en-US</language>
+		<projectUrl>http://github.com/clementi/Mvc.Jsonp</projectUrl>
+		<licenseUrl>https://raw.github.com/clementi/Mvc.Jsonp/master/license.mdown</licenseUrl>
+	</metadata>
+</package>

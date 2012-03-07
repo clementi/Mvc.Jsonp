@@ -1,0 +1,1 @@
+nuget pack /build /p configuration=release Mvc.Jsonp\Mvc.Jsonp.csproj

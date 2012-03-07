@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+    <metadata>
+        <id>$id$</id>
+        <version>$version$</version>
+        <authors>$author$</authors>
+        <description>$description$</description>
+        <references>$references$</references>
+        <projectUrl>http://github.com/clementi/Mvc.Jsonp</projectUrl>
+    </metadata>
+</package>

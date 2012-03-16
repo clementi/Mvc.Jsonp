@@ -29,6 +29,10 @@ This will give you output of type `application/javascript` like this:
 processStarships([{"Name":"Enterprise","Registry":"NCC-1701"},{"Name":"Galaxy","Registry":"NCC-70637},{"Name":"Tikopai","Registry":"NCC-1800"}]);
 ```
 
+## Building
+
+To build with .NET 4.0, just run the included build.cmd.
+
 ## NuGet Package
 
 To install Mvc.Jsonp from the [NuGet repository][nuget], use this command:

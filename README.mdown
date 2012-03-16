@@ -1,6 +1,6 @@
 # Mvc.Jsonp
 
-A simple ActionResult and Controller superclass for adding JSONP support to MVC 3.
+Mvc.Jsonp is a simple ActionResult and Controller superclass for adding JSONP support to MVC 3.
 
 ## Example
 

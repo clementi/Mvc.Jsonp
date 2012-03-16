@@ -31,7 +31,7 @@ processStarships([{"Name":"Enterprise","Registry":"NCC-1701"},{"Name":"Galaxy","
 
 ## Building
 
-To build with .NET 4.0, just run the included build.cmd.
+To build with .NET 4.0, just run the included build.cmd. This will place Mvc.Jsonp.dll and its symbols in the **output** directory.
 
 ## NuGet Package
 

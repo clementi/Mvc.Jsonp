@@ -23,6 +23,29 @@ public class HomeController : JsonpControllerBase
 }
 ```
 
+If you don't want to subclass your controller, you can just return a JsonpResult, like this:
+```c#
+public class HomeController
+{
+    public JsonpResult Index(string callback = "processStarships")
+    {
+        var starships = new List<Starship>
+        {
+            new Starship { Name = "Enterprise", Registry = "NCC-1701" },
+            new Starship { Name = "Galaxy", Registry = "NCC-70637" },
+            new Starship { Name = "Tikopai", Registry = "NCC-1800" }
+        };
+
+        return new JsonpResult
+        {
+            Callback = callback,
+            Data = starships,
+            JsonRequestBehavior = JsonRequestBehavior.AllowGet
+        };
+    }
+}
+```
+
 This will give you output of type `application/javascript` like this:
 
 ```

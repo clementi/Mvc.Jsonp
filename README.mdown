@@ -23,7 +23,7 @@ public class HomeController : JsonpControllerBase
 }
 ```
 
-If you don't want to subclass your controller, you can just return a JsonpResult, like this:
+If you don't want to make your controller a subclass of `JsonpControllerBase`, you can just return a `JsonpResult`, like this:
 ```c#
 public class HomeController
 {

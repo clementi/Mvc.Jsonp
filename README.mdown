@@ -1,5 +1,9 @@
 # Mvc.Jsonp
 
+## End of life
+
+This repository has been archived and is now read-only.
+
 Mvc.Jsonp is a simple ActionResult and Controller base class for adding JSONP support to MVC 3.
 
 ## Example
